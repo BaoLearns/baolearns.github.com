@@ -2,7 +2,7 @@
 layout:     post
 title:      挑战世界顶级十七项编程
 category: blog
-description: 世界顶级编程竞赛,你还要由于什么.
+description: 世界顶级编程竞赛,你还要犹豫什么.
 ---
 本文转自：http://developer.51cto.com/art/201507/485365.htm
 
