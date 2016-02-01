@@ -21,8 +21,7 @@
         <div class="home-icon-con">
             <a class="home-menu-icon" href="/">Oliver</a>
             <a class="home-follow" href="#" title="Contact Me">+</a>
-	    <a class="home-menu-icon" href="/">专注于技术的网站</a>
-        </div>
+	 </div>
         <div class="home-contact">
             <a href="http://weibo.com/u/3796329175" target="_blank" style="margin-left:-5px;"><img src="http://www.weibo.com/favicon.ico" alt="" width="25"/></a>
             <a href="http://Royecode@163.com" target="_blank" style="text-align:center;"><img src="http://www.163.com/favicon.ico" alt="" width="22"/></a>
