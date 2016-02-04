@@ -51,34 +51,19 @@ C语言的memcpy()函数,如果有同一空间的复制时,也是才采用从后
 
 ```
 char *deleteAcopyB(char *st){
- 
 	int old_Length = strlen(st);//原字符串长度
-	
 	int deleteA_Length = 0; //删除'a'后的长度
-	
 	int number = 0; //'b'的个数
-	
 	for(int i = 0; i < old_Length; ++i){//删除'a'字符
-	
 		if(st[i] != 'a') st[deleteA_Length++] = st[i];
-	
 		if(st[i] == 'b') number++;//统计'b'的个数
-	
 	}
-	
 	int new_Length = deleteA_Length + number;//新字符串长度
-	
 	st[new_Length] = '\0';
-	
 	for(int i = deleteA_Length - 1, j = new_Length - 1; i >= 0; --i){//复制'b'字符
-	
 		st[j--] = st[i];
-	
 		if(st[i] == 'b') st[j--] = st[i];
-	
 	}
-	
 	return st;
-
 }
 ```
