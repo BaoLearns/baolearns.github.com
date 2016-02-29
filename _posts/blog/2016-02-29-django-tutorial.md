@@ -8,6 +8,7 @@ category: blog
 
 #Django简明教程
 ---
+
 大家好,很荣幸给大家介绍Django.
 
 Django是Python的一个重量级的Web库,能够较块地开发网站.
