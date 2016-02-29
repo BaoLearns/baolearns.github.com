@@ -7,6 +7,7 @@ category: blog
 
 
 #Django简明教程
+
 ---
 
 大家好,很荣幸给大家介绍Django.
@@ -67,6 +68,7 @@ print django.VERSION
 
 ##我的第一个django项目
 
+---
 输入命令建立django的第一个项目mysite:
 
 ```
@@ -121,6 +123,7 @@ You're seeing this message because you have DEBUG = True in your Django settings
 停掉开发服务器,可在命令行输入Ctrl + C .
 
 #Hello World
+
 ---
 
 很多时候学习一门语言,惯例的做法是先输出"Hello World",而我不想打破常规,让我们来看看"Hello World"是怎样在django中输出的.
@@ -239,9 +242,11 @@ def index(request):
 你就会得到"Hello World".
 
 #持续更新中...
+
 ---
 
 #关于本教程
+
 ---
 
 本教程可供任何人免费使用学习,但严禁用于商业用途.**(纪念伟大的人Aaron swartz 1986-2013)**由于作者水平所限,本教程难免有错误之处,还望大家海涵并指出,有人很问题请用邮箱联系我LBaoCode@Gmail.com .
