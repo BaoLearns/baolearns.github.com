@@ -5,6 +5,7 @@ description: 简单的Django入门教程
 category: blog
 ---
 
+
 #Django简明教程
 ---
 大家好,很荣幸给大家介绍Django.
@@ -22,19 +23,26 @@ Django采用了MVC设计模式,即Model,View,Controller.
 由于Django是Python语言下的一个库,所以学习Django之前你必须要了解基本的Python语法,你可以参见[廖大神的Python入门教程](https://www.liaoxuefeng.com).
 
 Django现在最新的版本是1.9,所以本教程是使用**Python 2.7** + **Django 1.9** .如果你使用Python 3.x也没关系,Django已完美支持Python 3.x .
+
 ##安装django
 ---
+
 ###Linux下的安装
 
 安装django之前首先要有python运行环境.
+
 ####pip命令安装
+
 通过pip命令安装Django
 
 ```
 pip install Django
 ```
+
 这样就会自动安装最新版本的django.
+
 ####下载源码安装
+
 去官方网站[https://www.djangoproject.com/download/](https://www.djangoproject.com/download/)下载django,下载到本地并解压.
 
 然后输入命令:
@@ -43,9 +51,11 @@ pip install Django
 cd Django-1.9
 python setup.py install
 ```
+
 这样就会安装好django.
 
 ####查看django是否安装成功
+
 在python运行环境下,输入:
 
 ```
@@ -53,7 +63,9 @@ import django
 print django.VERSION
 ```
 如果能够输出django的版本号,说明您已经安装成功了,congratulation.
+
 ##我的第一个django项目
+
 输入命令建立django的第一个项目mysite:
 
 ```
@@ -90,10 +102,10 @@ python manage.py runserver
 #自行指定ip地址和端口号
 python manage.py runserver 0.0.0.0:50003
 ```
+
 在浏览器中输入127.0.0.1:8000,可得到如下信息:
 
 ```
-
 It worked!
 Congratulations on your first Django-powered page.
 
@@ -102,11 +114,14 @@ Of course, you haven't actually done any work yet. Next, start your first app by
 You're seeing this message because you have DEBUG = True in your Django settings file and you haven't configured any URLs. Get to work!
 
 ```
+
 这就说明,我们自己已经运行了第一个django web程序,你可以看到,我们并没有做什么动作,所以说django为我们做了很多事.
 
 停掉开发服务器,可在命令行输入Ctrl + C .
+
 #Hello World
 ---
+
 很多时候学习一门语言,惯例的做法是先输出"Hello World",而我不想打破常规,让我们来看看"Hello World"是怎样在django中输出的.
 
 等等,我们的项目里多了一个文件db.sqlite3,这是什么文件.这个多出来的文件,是因为mysite/setting.py配置了数据库是sqlite3数据库,配置如下:
@@ -119,6 +134,7 @@ DATABASES = {
     }
 }
 ```
+
 以上信息是说,使用了sqlite3数据库,数据库的名字是os.path.join(BASE_DIR, 'db.sqlite3'),这个目录就是在mysite/下.
 
 首先我们得先建一个app,一个网站就是由多个app组个而成.
@@ -126,6 +142,7 @@ DATABASES = {
 ```
 python manage.py startapp blog
 ```
+
 这样就新建了一个名叫blog的app应用,看看现在mysite有什么文件和文件夹.
 
 ```
@@ -155,6 +172,7 @@ python manage.py startapp blog
 3 directories, 18 files
 
 ```
+
 blog文件夹就是新建的app应用,里面的文件models.py是blog app的数据库操作,views.py是当要访问blog这个app的时候要怎样处理,其他文件暂时不会用到,用到时会逐一解释.
 
 新建了一个blog app,在配置文件里的使用哪些app增加上blog即可.还记得配置文件是哪个文件吧,mysite/setting.py .
@@ -174,6 +192,7 @@ INSTALLED_APPS = [
 ]
 
 ```
+
 现在来看看mysite/urls.py文件.
 
 ```
@@ -184,6 +203,7 @@ urlpatterns = [
     url(r'^admin/', admin.site.urls),
 ]
 ```
+
 urlpatterns里面包含了一个url(r'^admin/', admin.site.urls),第一个参数是一个正则表达式匹配,就是匹配开头是admin/的url地址,第二个参数是当匹配到时采取的动作,也就是说当访问了127.0.0.1:8000/admin/时,处理函数是admin.site里的urls函数.好了,现在我们增加一个url,当访问127.0.0.1:8000/index/ 的时候,让它显示"Hello World".
 
 ```
@@ -197,6 +217,7 @@ urlpatterns = [
     url(r'^index$', index), #当访问开头是index时,处理函数是blog.views.index
 ]
 ```
+
 现在blog.views下的index方法还没有写,现在编辑blog/views.py,输入如下文字:
 
 ```
@@ -205,6 +226,7 @@ from django.http import HttpResponse
 def index(request):
     return HttpResponse("<h1>Hello World</h1>")
 ```
+
 这个index函数,会返回一个HttpResponse,内容是<h1\>Hello World<h1\>.
 
 浏览器输入:
@@ -212,9 +234,12 @@ def index(request):
 ```
 127.0.0.1:8000/index
 ```
+
 你就会得到"Hello World".
+
 #持续更新中...
 ---
+
 #关于本教程
 ---
 
