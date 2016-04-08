@@ -6,6 +6,6 @@ paginate: 8
 permalink: /:title
 
 title: oliverbao
-url: http://oliverbaoa.github.io
+url: http://baolearns.github.io
 feed: /atom.xml
-author_info: <a href="http://oliverbaoa.github.io>OliverBao</a>
+author_info: <a href="http://baolearns.github.io>OliverBao</a>
