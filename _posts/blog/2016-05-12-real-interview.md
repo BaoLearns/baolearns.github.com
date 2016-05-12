@@ -50,6 +50,7 @@ category: blog
     Email:Royecode@163.com
     Date:2016-05-12
     Version:1.0
+    Time complexity:O(NlogN)
 */
 
 #include <iostream>
